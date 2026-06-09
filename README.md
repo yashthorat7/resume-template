@@ -30,24 +30,24 @@ Here is the exact metrics breakdown of how the baseline **93% ATS score** is cal
 
 ### 🔍 Deep Dive: Why the ATS Compatibility is So High
 
-* 📂 **Perfect Reading Order Flow**: Multi-column layouts confuse ATS parsers, making them read text from left to right across boundaries. A single-column vertical flow guarantees a linear, logical scan order.
-* 🚫 **Zero Symbol Pollution**: Traditional parsers get tripped up by visual rating bars, progress circles, or embedded graphic symbols. This template isolates layout decorations, leaving only pure text content for the scanner.
-* 📄 **Markdown-to-HTML Integrity**: Since layout structure is generated programmatically from Markdown, sections like `## Experience` and `## Education` translate directly into standard semantic headers, matching ATS categorizations flawlessly.
+* 📂 **Perfect Reading Order Flow**: Single-column vertical layout prevents parser confusion by guaranteeing a linear, logical scan order.
+* 🚫 **Zero Symbol Pollution**: Eliminates rating bars, progress circles, and graphic symbols, leaving only pure, clean text.
+* 📄 **Semantic HTML Structure**: Converts Markdown headings directly into standard `<h2>` and `<h3>` tags for flawless ATS categorization.
 
 ## ✨ Features
 
-- 🌈 **Complete Customization**: Rearrange sections, rename them, or add your own modular sections. The parser reads your Markdown sequentially and dynamically builds the page.
-- 📏 **Smart Dynamic Spacing**: Measures page height and automatically expands or compresses margins and gaps to fit the A4 page perfectly.
-- 🖨️ **Pixel-Perfect Print Styles**: Custom `@media print` rules ensure a clean, borderless PDF that matches the screen preview exactly.
-- 🎯 **ATS Optimized (~93% Score)**: Single-column layout, standard headings, searchable/highlightable text nodes, and clean Markdown syntax to breeze through applicant tracking systems.
+- 🌈 **Modular Customization**: Add, remove, or rearrange sections dynamically from Markdown.
+- 📏 **Smart Spacing Engine**: Auto-adjusts margins, gaps, and line heights to fit everything on exactly one A4 page.
+- 🖨️ **Pixel-Perfect PDF**: Custom print styles ensure the exported PDF matches the screen preview exactly.
+- 🎯 **ATS Optimized**: Standard single-column semantic structure optimized for high parser accuracy (~93% baseline).
 
 ## 🎨 Typography & Readability
 
 This template uses a highly optimized pairing of professional typefaces to balance premium web aesthetics with print legibility:
 
-* 🔤 **Primary Font (`Reddit Sans`)**: Applied to all body text, contact information, and bullet descriptions. Reddit Sans is a geometric sans-serif engineered specifically for crisp screen legibility and print sharpness at small sizes (10pt). Its open apertures and distinct letterforms prevent character blending, ensuring high-density info remains extremely readable.
-* 🏷️ **Secondary Font (`Raleway`)**: Applied to section titles and headers. Raleway is an elegant, stylized neo-grotesque font with unique geometric terminals. It provides a sharp, high-contrast visual anchor for section headings, establishing a clean typographic hierarchy.
-* 📈 **Scanability & OCR**: The visual contrast between these two fonts helps human recruiters quickly map your resume sections within a 6-second scan, while ensuring standard Unicode compatibility for OCR/ATS scanners to translate text with 100% fidelity.
+* 🔤 **Primary Font (`Reddit Sans`)**: Geometric sans-serif optimized for crisp screen legibility and print legibility at small sizes (10pt).
+* 🏷️ **Secondary Font (`Raleway`)**: Elegant neo-grotesque font used for sharp, high-contrast section headers.
+* 📈 **Scanability & OCR**: Visual contrast helps recruiters scan in seconds, while standard Unicode guarantees 100% OCR parser compatibility.
 
 ## 📂 Directory Structure
 
@@ -127,11 +127,9 @@ Your task is to update the attached template with my raw details provided below 
 ````
 
 ### 2️⃣ Quick Tips for the Perfect Fit
-* **Experience Bullets**: Keep each bullet point between **120 and 200 characters** (approx. 3-4 bullets per job).
-* **Project Bullets**: Keep each bullet point between **150 and 190 characters** (approx. 3 bullets per project).
-* **Skills**: Separate items with the bullet dot ` • ` (e.g., `Next.js • React.js • CSS`).
-* **Education**: Separate qualifiers using the pipe symbol ` | ` (e.g., `**Degree** | **Dates** | **GPA**`).
-* **Flexible Structure**: Feel free to remove or rearrange sections or parts if needed—the dynamic display will adapt seamlessly and still look exactly the same!
+* **Bullet Length**: Aim for **120–200 characters** for experience, and **150–190 characters** for project bullets.
+* **Separators**: Use bullet dots ` • ` for skills and pipe characters ` | ` for education metadata.
+* **Auto-Adaptation**: The layout dynamically scales—simply rearrange or remove sections to fit your needs.
 
 ---
 
