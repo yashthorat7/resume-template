@@ -1,0 +1,199 @@
+.bullet-list {
+    list-style-type: disc;
+    padding-left: 7mm;
+    margin-top: var(--spacing-bullet-top);
+    margin-bottom: 0;
+}
+
+.bullet-list ::marker {
+    font-size: 0.85em;
+}
+
+.bullet-item {
+    font-size: var(--size-base);
+    margin-bottom: var(--spacing-bullet-gap);
+    line-height: var(--line-height-base);
+}
+
+.achievement-list {
+    list-style-type: disc;
+    column-count: 2;
+    column-gap: 7mm;
+    padding-left: 7mm;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-title + .achievement-list {
+    margin-top: calc(var(--spacing-after-title) + var(--spacing-bullet-top)) !important;
+}
+
+.achievement-list ::marker {
+    font-size: 0.85em;
+}
+
+.achievement-item {
+    break-inside: avoid;
+    font-size: var(--size-base);
+    margin-bottom: var(--spacing-achievement-gap);
+    line-height: var(--line-height-base);
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+}
+
+.skill-title {
+    white-space: nowrap;
+    font-family: var(--font-secondary);
+    font-weight: var(--weight-skill-title);
+    font-size: var(--size-entry-title);
+    margin: 0;
+}
+
+.skill-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1mm;
+    row-gap: 0.5mm;
+    line-height: var(--line-height-base);
+}
+
+.skill-item-text {
+    font-size: var(--size-base);
+    font-weight: var(--weight-body);
+}
+
+.skill-dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    margin-left: 1.5mm;
+    margin-right: 1.5mm;
+    vertical-align: middle;
+    user-select: none;
+    font-size: 0;
+}
+
+.edu-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: var(--font-primary);
+    font-weight: var(--weight-body);
+    font-size: var(--size-base);
+    line-height: var(--line-height-base);
+}
+
+.education-container .edu-row:first-child {
+    line-height: var(--line-height-base);
+}
+
+.edu-bold {
+    font-weight: var(--weight-edu-bold);
+}
+
+/* custom svg vertical line */
+.pipe-sep {
+    display: inline-block;
+    width: 0.25em;
+    height: 1.1em;
+    vertical-align: middle;
+    color: var(--color-secondary);
+    user-select: none;
+    margin-left: 2mm;
+    margin-right: 2mm;
+    position: relative;
+    top: -0.05em;
+}
+
+.pipe-sep svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* inline arrow icon styling */
+.arrow-icon {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    vertical-align: middle;
+    margin-left: -1px;
+    position: relative;
+}
+
+.arrow-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contact-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-dot {
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    margin-left: 0.8mm;
+    margin-right: 0.8mm;
+    vertical-align: middle;
+    user-select: none;
+    font-size: 0;
+}
+
+.header-section {
+    text-align: center;
+}
+
+.header-section h1 {
+    font-family: var(--font-secondary);
+    font-weight: var(--weight-header-name);
+    font-size: var(--size-name);
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin: 0;
+    transform: translateY(-2px);
+}
+
+.header-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 5mm;
+    margin-right: 5mm;
+    row-gap: 1mm;
+    font-size: var(--size-base);
+    font-weight: var(--weight-body);
+    color: var(--color-primary);
+    text-transform: lowercase;
+}
+
+.skills-container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-skill-row-gap);
+    line-height: var(--line-height-base);
+}
+
+.education-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-edu-row-gap);
+    margin-top: 0;
+}
+
+.font-normal {
+    font-weight: var(--weight-bold-highlight);
+}

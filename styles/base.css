@@ -1,0 +1,51 @@
+html, body {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background-color: var(--color-bg-body);
+    display: flex;
+    justify-content: center;
+    padding: 5mm;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+}
+
+@page {
+    size: A4 portrait;
+    margin: 0;
+}
+
+/* a4 print stylesheet rules */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        box-sizing: border-box !important;
+    }
+    html, body {
+        width: 210mm !important;
+        height: 297mm !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+    .page-container {
+        width: 210mm !important;
+        height: 297mm !important;
+        padding: 8.5mm 10mm !important;
+        outline: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        border: none !important;
+        box-sizing: border-box !important;
+        page-break-inside: avoid !important;
+        page-break-after: avoid !important;
+    }
+}

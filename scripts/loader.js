@@ -1,0 +1,33 @@
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('docs/info-og.md')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch docs/info-og.md');
+            }
+            return response.text();
+        })
+        .catch(error => {
+            // fallback if fetch fails
+            console.warn('docs/info-og.md not found or failed to load. Falling back to docs/info.md...', error);
+            return fetch('docs/info.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch both docs/info-og.md and docs/info.md');
+                    }
+                    return response.text();
+                });
+        })
+        .then(mdText => {
+            const resumeData = parseResumeMarkdown(mdText);
+            renderResume(resumeData);
+        })
+        .catch(error => {
+            console.error('Error loading resume:', error);
+            document.getElementById('resume-container').innerHTML = `
+                <div style="text-align: center; color: red; padding: 20px 0;">
+                    <p style="font-weight: bold;">Error loading resume data</p>
+                    <p style="font-size: 12px;">${error.message}</p>
+                </div>
+            `;
+        });
+});
