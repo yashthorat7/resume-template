@@ -1,5 +1,5 @@
 :root {
-    --font-primary: 'Reddit Sans', sans-serif;
+    --font-primary: 'Noto Sans', sans-serif;
     --font-secondary: 'Raleway', sans-serif;
 
     --weight-light: 300;
@@ -27,10 +27,15 @@
     --color-primary: #000000;
     --color-secondary: #353535;
 
+    --page-padding-top: 8.5mm;
+    --page-padding-bottom: 10mm;
+    --page-padding-left: 10mm;
+    --page-padding-right: 10mm;
+
     --line-height-base: 1.2;
     --spacing-section-gap: 3.5mm;
     --spacing-after-title: 1.2mm;
-    --spacing-entry-gap: 2mm;
+    --spacing-entry-gap: 1.2mm;
     --spacing-bullet-gap: 0.8mm;
     --spacing-bullet-top: 0.6mm;
     --spacing-skill-row-gap: 0.5mm;

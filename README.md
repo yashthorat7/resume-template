@@ -55,7 +55,7 @@ This template uses a highly optimized pairing of professional typefaces to balan
 resume-template/
 ├── docs/
 │   ├── info.md                  # Public template resume containing dummy/sanitized details
-│   ├── info-og.md               # Your private resume content (git-ignored)
+│   ├── resume.md               # Your private resume content (git-ignored)
 │   └── info-cleaner.js          # JS utility to sanitize/clean info.md
 │
 ├── scripts/                    # Core spacing and rendering logic
@@ -99,7 +99,7 @@ Then navigate to `http://localhost:8000` to see your resume live!
 
 ### 3️⃣ File Loading System
 
-* **`docs/info.md`**: The fallback file loaded with generic/sanitized template details (loads automatically if your `info-og.md` is missing or has a loading error).
+* **`docs/info.md`**: The fallback file loaded with generic/sanitized template details (loads automatically if your `resume.md` is missing or has a loading error).
 
 ---
 

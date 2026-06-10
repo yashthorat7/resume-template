@@ -24,10 +24,6 @@
     margin-bottom: 0;
 }
 
-.section-title + .achievement-list {
-    margin-top: calc(var(--spacing-after-title) + var(--spacing-bullet-top)) !important;
-}
-
 .achievement-list ::marker {
     font-size: 0.85em;
 }
@@ -125,6 +121,10 @@
     vertical-align: middle;
     margin-left: -1px;
     position: relative;
+}
+
+.entry-title h3 .arrow-icon {
+    transform: translateY(-1px);
 }
 
 .arrow-icon svg {

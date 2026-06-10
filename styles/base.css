@@ -39,7 +39,7 @@ body {
     .page-container {
         width: 210mm !important;
         height: 297mm !important;
-        padding: 8.5mm 10mm !important;
+        padding: var(--page-padding-top) var(--page-padding-right) var(--page-padding-bottom) var(--page-padding-left) !important;
         outline: none !important;
         box-shadow: none !important;
         margin: 0 !important;

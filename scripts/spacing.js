@@ -7,7 +7,7 @@ function autoAdjustSpacing(container) {
     const baselines = {
         sectionGap:      2.0,
         afterTitle:      1.0,
-        entryGap:        1.5,
+        entryGap:        1.0,
         bulletGap:       0.5,
         bulletTop:       0.4,
         skillRowGap:     0.3,
@@ -42,7 +42,23 @@ function autoAdjustSpacing(container) {
     void page.offsetHeight;
 
     const pageHeight = page.clientHeight;
-    const pxPerMm = pageHeight / (297 - 17);
+    
+    function parsePaddingMm(varName, defaultValue) {
+        const value = (window.getComputedStyle(root).getPropertyValue(varName) || '').trim();
+        if (!value) return defaultValue;
+        if (value.endsWith('mm')) {
+            return parseFloat(value) || defaultValue;
+        } else if (value.endsWith('px')) {
+           
+            const px = parseFloat(value) || (defaultValue * 96 / 25.4);
+            return px * (25.4 / 96);
+        }
+        return parseFloat(value) || defaultValue;
+    }
+    
+    const paddingTopMm = parsePaddingMm('--page-padding-top', 8);
+    const paddingBottomMm = parsePaddingMm('--page-padding-bottom', 10);
+    const pxPerMm = pageHeight / (297 - (paddingTopMm + paddingBottomMm));
 
     page.style.height = 'auto';
     page.style.overflow = 'visible';
@@ -60,9 +76,8 @@ function autoAdjustSpacing(container) {
 
     const contributors = [
         { key: 'sectionGap',     count: sectionGaps,                              weight: 6,   min: 2.0, max: 12 },
-        { key: 'entryGap',       count: entries.length,                            weight: 4,   min: 1.5, max: 7 },
         { key: 'bulletGap',      count: Math.max(bullets.length - bulletLists.length, 0), weight: 2,   min: 0.5, max: 3.5 },
-        { key: 'afterTitle',     count: titles.length,                             weight: 2,   min: 1.0, max: 4 },
+        { key: 'afterTitle',     count: titles.length + entries.length,            weight: 2,   min: 1.0, max: 4 },
         { key: 'bulletTop',      count: bulletLists.length,                        weight: 1.5, min: 0.4, max: 3 },
         { key: 'skillRowGap',    count: Math.max(skillRows.length - 1, 0),         weight: 1,   min: 0.3, max: 2.5 },
         { key: 'eduRowGap',      count: Math.max(eduRows.length - 1, 0),           weight: 1,   min: 0.6, max: 3 },
@@ -113,7 +128,7 @@ function applySpacing(root, s) {
     root.style.setProperty('--line-height-base',        s.lineHeight);
     root.style.setProperty('--spacing-section-gap',      s.sectionGap + 'mm');
     root.style.setProperty('--spacing-after-title',      s.afterTitle + 'mm');
-    root.style.setProperty('--spacing-entry-gap',        s.entryGap + 'mm');
+    root.style.setProperty('--spacing-entry-gap',        s.afterTitle + 'mm');
     root.style.setProperty('--spacing-bullet-gap',       s.bulletGap + 'mm');
     root.style.setProperty('--spacing-bullet-top',       s.bulletTop + 'mm');
     root.style.setProperty('--spacing-skill-row-gap',    s.skillRowGap + 'mm');
