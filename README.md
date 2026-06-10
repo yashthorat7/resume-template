@@ -45,7 +45,7 @@ Here is the exact metrics breakdown of how the baseline **93% ATS score** is cal
 
 This template uses a highly optimized pairing of professional typefaces to balance premium web aesthetics with print legibility:
 
-* 🔤 **Primary Font (`Reddit Sans`)**: Geometric sans-serif optimized for crisp screen legibility and print legibility at small sizes (10pt).
+* 🔤 **Primary Font (`Noto Sans`)**: Highly legible sans-serif optimized for crisp screen legibility and print output at small sizes (10pt).
 * 🏷️ **Secondary Font (`Raleway`)**: Elegant neo-grotesque font used for sharp, high-contrast section headers.
 * 📈 **Scanability & OCR**: Visual contrast helps recruiters scan in seconds, while standard Unicode guarantees 100% OCR parser compatibility.
 
@@ -117,8 +117,12 @@ Your task is to update the attached template with my raw details provided below 
 
 ### Rules & Constraints:
 1. **Match Structure & Formatting**: Retain the exact section order, subsection headers, bolding style (`**`), lists, and link formats shown in the template.
-2. **Strict Character Counts (CRITICAL)**: To ensure the content fits perfectly on exactly one A4 page, each rewritten bullet point must closely match the character length (within +/- 10 characters) of the corresponding bullet point in the template.
-3. **Clean Code Output**: Output ONLY the raw, updated Markdown. No conversational preamble or explanation.
+2. **XYZ Impact Format**: Follow the **XYZ format** (Accomplished [X] as measured by [Y], by doing [Z]) for experience and project bullet points, starting with a strong action verb.
+3. **Strict Character Counts (CRITICAL)**: 
+   * **Project & Experience Bullets**: Keep character length around **150-180 characters** (excluding bullet markers) so the text is concise and fits perfectly on exactly one page.
+   * **Achievement Items**: Keep each achievement item short, **not exceeding 50 characters** where possible, to prevent wrapping in multi-column layouts.
+4. **Clean Bolding Spacing**: Ensure bold tags (`**`) are neatly spread out. Bold key metrics/numbers and distinct technical keywords, making sure no sequence of **8 or more consecutive words** remains unbolded, and do not split hyphenated words (e.g. bold the entire hyphenated term like `**Python-based**`).
+5. **Clean Code Output**: Output ONLY the raw, updated Markdown. No conversational preamble or explanation.
 
 ---
 ### MY RAW DETAILS
@@ -127,7 +131,8 @@ Your task is to update the attached template with my raw details provided below 
 ````
 
 ### 2️⃣ Quick Tips for the Perfect Fit
-* **Bullet Length**: Aim for **120–200 characters** for experience, and **150–190 characters** for project bullets.
+* **Bullet Length**: Aim for **150–180 characters** for experience and project bullets.
+* **Achievements**: Keep achievements brief and **under 50 characters** to fit the multi-column layout.
 * **Separators**: Use bullet dots ` • ` for skills and pipe characters ` | ` for education metadata.
 * **Auto-Adaptation**: The layout dynamically scales—simply rearrange or remove sections to fit your needs.
 
