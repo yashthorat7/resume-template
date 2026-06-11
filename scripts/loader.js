@@ -24,9 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => {
             console.error('Error loading resume:', error);
             document.getElementById('resume-container').innerHTML = `
-                <div style="text-align: center; color: red; padding: 20px 0;">
-                    <p style="font-weight: bold;">Error loading resume data</p>
-                    <p style="font-size: 12px;">${error.message}</p>
+                <div style="text-align: center; color: #888; padding: 20px 0; font-size: 13px;">
+                    Could not load resume.
                 </div>
             `;
         });
