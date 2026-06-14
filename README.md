@@ -144,12 +144,7 @@ Your task is to update the attached template with my raw details provided below 
 2. **Ensure your browser zoom level is exactly 100%** (no more, no less).
 3. Press **`Ctrl + P`** (Windows) or **`Cmd + P`** (Mac) to open the print dialog.
 4. Set the destination to **Save as PDF**.
-5. Adjust these options in the print settings:
-   * **Paper Size**: **A4** (essential!).
-   * **Margins**: **None** or **Default** (since the stylesheet controls the margins).
-   * **Headers and Footers**: Uncheck/disable.
-   * **Background Graphics**: Check/enable (to keep the elegant lines and bullet dots).
-6. Click **Save** and enjoy your stunning new resume! 🎉
+5. Click **Save** and enjoy your stunning new resume! 🎉
 
 ---
 

@@ -5,8 +5,14 @@ function parseMarkdownFormatting(text) {
 
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
     html = html.replace(linkRegex, (match, linkText, url) => {
-        if (url.startsWith('tel:') || url.startsWith('mailto:')) {
+        if (url.startsWith('tel:')) {
             return `<a href="${url}" class="contact-link">${linkText}</a>`;
+        }
+        const isEmail = url.startsWith('mailto:') || (url.includes('@') && !url.includes('://'));
+        if (isEmail) {
+            const email = url.startsWith('mailto:') ? url.substring(7) : url;
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+            return `<a href="${gmailUrl}" class="contact-link" target="_blank" rel="noopener noreferrer">${linkText}&thinsp;<span class="arrow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="18" x2="17" y2="7"></line><polyline points="9 6 18 6 18 15"></polyline></svg></span></a>`;
         }
         return `<a href="${url}" class="contact-link" target="_blank" rel="noopener noreferrer">${linkText}&thinsp;<span class="arrow-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="18" x2="17" y2="7"></line><polyline points="9 6 18 6 18 15"></polyline></svg></span></a>`;
     });

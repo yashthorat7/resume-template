@@ -1,7 +1,7 @@
 # Yash Thorat
 
 - [+910000000000](tel:+910000000000)
-- [dummyemail@gmail.com](mailto:dummyemail@gmail.com)
+- [dummyemail@gmail.com](dummyemail@gmail.com)
 - [linkedIn](https://github.com/yashthorat7)
 - [portfolio](https://github.com/yashthorat7)
 - [github](https://github.com/yashthorat7)
