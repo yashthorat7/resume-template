@@ -19,7 +19,6 @@ function renderResume(resume) {
     headerSection.appendChild(contactDiv);
     container.appendChild(headerSection);
 
-    // render sections dynamically
     resume.sections.forEach(section => {
         const secElement = document.createElement('section');
         
@@ -90,7 +89,6 @@ function renderResume(resume) {
                     h3.innerHTML = skillTitle;
                     skillRow.appendChild(h3);
 
-                    // insert custom svg separator
                     const pipe = document.createElement('span');
                     pipe.className = 'pipe-sep';
                     pipe.innerHTML = '<svg viewBox="0 0 6 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter"><line x1="3" y1="2" x2="3" y2="22"></line></svg>';
