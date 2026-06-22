@@ -45,7 +45,7 @@ Here is the exact metrics breakdown of how the baseline **93% ATS score** is cal
 
 This template uses a highly optimized pairing of professional typefaces to balance premium web aesthetics with print legibility:
 
-* 🔤 **Primary Font (`Noto Sans`)**: Highly legible sans-serif optimized for crisp screen legibility and print output at small sizes (10pt).
+* 🔤 **Primary Font (`Reddit Sans`)**: Highly legible sans-serif optimized for crisp screen legibility and print output at small sizes (10pt).
 * 🏷️ **Secondary Font (`Raleway`)**: Elegant neo-grotesque font used for sharp, high-contrast section headers.
 * 📈 **Scanability & OCR**: Visual contrast helps recruiters scan in seconds, while standard Unicode guarantees 100% OCR parser compatibility.
 

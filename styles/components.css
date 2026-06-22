@@ -16,9 +16,10 @@
 }
 
 .achievement-list {
-    list-style-type: disc;
-    column-count: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 7mm;
+    list-style-type: disc;
     padding-left: 7mm;
     margin-top: 0;
     margin-bottom: 0;
@@ -29,6 +30,7 @@
 }
 
 .achievement-item {
+    display: list-item;
     break-inside: avoid;
     font-size: var(--size-base);
     margin-bottom: var(--spacing-achievement-gap);
@@ -93,7 +95,6 @@
     font-weight: var(--weight-edu-bold);
 }
 
-/* custom svg vertical line */
 .pipe-sep {
     display: inline-block;
     width: 0.25em;
@@ -113,7 +114,6 @@
     display: block;
 }
 
-/* inline arrow icon styling */
 .arrow-icon {
     display: inline-block;
     width: 0.8em;

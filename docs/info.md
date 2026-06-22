@@ -35,7 +35,7 @@
 
 ## Education
 
-- Shri Shivaji Vidya Prasarak Sanstha's Bapusaheb Shivajirao Deore College Of Engineering, Dhule **B.Tech in Computer Engineering** | 2022 - 2026 | **CGPA - 0.0** 
+- **B.Tech in Computer Engineering** | 2022 - 2026 | **CGPA - 0.0** Shri Shivaji Vidya Prasarak Sanstha's Bapusaheb Shivajirao Deore College Of Engineering, Dhule 
 - **Senior Secondary (CBSE XII)** | Kendriya Vidyalaya, Dhule | Science with Computer Science | 2021 | **00%**
 - **Secondary (CBSE X)** | Kendriya Vidyalaya, Dhule | 2019 | **00%**
 
@@ -45,13 +45,13 @@
 - **AI/ML**: RAG Architectures • LLM Fine-Tuning • Model Training • Deep Learning • Pandas
 - **Backend**: Node.js • Express.js • REST APIs • AWS • PostgreSQL • Supabase • Neon • Prisma • Docker
 - **Programming Languages**: C++ Advanced DSA, Competitive Programming • Python • C#
-- **Tools & Platforms**: Git • Vercel • VS Code • Claude Code • Antigravity • Figma • Photoshop
+- **Tools & Platforms**: Git, Github • Vercel • VS Code • Claude Code • Antigravity • Figma • Photoshop
 
 ## Achievements
 
 - [LeetCode: **Top 1%** profile, **1727** rating, **1000+** solved](https://github.com/yashthorat7)
-- [**Lead** of the **biggest tech club** on campus (Pandora)](https://github.com/yashthorat7)
-- [Created **16+** full-stack and **AI projects** on GitHub](https://github.com/yashthorat7)
-- [**VCs approached** me regarding one of my AI projects](https://github.com/yashthorat7)
 - [**Hackathon Winner** & **SIH 2025**/DIPEX 2026 finalist](https://github.com/yashthorat7)
+- [**VCs approached** me regarding one of my AI projects](https://github.com/yashthorat7)
+- [Created **16+** full-stack and **AI projects** on GitHub](https://github.com/yashthorat7)
+- [**Lead** of the **biggest tech club** on campus (Pandora)](https://github.com/yashthorat7)
 - [**AWS Certified** Cloud Foundations **credential** holder](https://github.com/yashthorat7)
