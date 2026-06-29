@@ -139,16 +139,23 @@
 }
 
 .contact-dot {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 8mm;
+    height: 3px;
+    user-select: none;
+    font-size: 0;
+}
+
+.contact-dot::after {
+    content: '';
+    display: block;
     width: 3px;
     height: 3px;
     border-radius: 50%;
     background-color: var(--color-secondary);
-    margin-left: 0.8mm;
-    margin-right: 0.8mm;
-    vertical-align: middle;
-    user-select: none;
-    font-size: 0;
 }
 
 .header-section {
@@ -168,7 +175,8 @@
 .header-contacts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 0;
     align-items: center;
     margin-left: 5mm;
     margin-right: 5mm;

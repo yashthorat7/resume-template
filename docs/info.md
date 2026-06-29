@@ -6,11 +6,11 @@
 - [portfolio](https://github.com/yashthorat7)
 - [github](https://github.com/yashthorat7)
 - [leetCode](https://github.com/yashthorat7)
-- [x(twitter)](https://github.com/yashthorat7)
+- [x](https://github.com/yashthorat7)
 
 ## Experience
 
-### Freelance | Full-Stack Developer | Dec 2021 - Sep 2025
+### Freelance | Full-Stack Developer | Dec 2022 - May 2026
 - Acquired **20+** global clients via **Discord** and local networks, architecting **web platforms** using **Next.js** and **AWS** that compressed production release cycles by **40%**.
 - Scaled database throughput by **150%** across concurrent full-stack applications by restructuring **PostgreSQL** indexes, optimizing complex **Prisma** queries, and tuning data access layers.
 - Engineered **Python-based** semantic **search** and **AI** recommendation engines, integrating them with custom **React** frontends to boost rolling user retention by **22%** across **10+** client platforms.
@@ -45,13 +45,13 @@
 - **AI/ML**: RAG Architectures • LLM Fine-Tuning • Model Training • Deep Learning • Pandas
 - **Backend**: Node.js • Express.js • REST APIs • AWS • PostgreSQL • Supabase • Neon • Prisma • Docker
 - **Programming Languages**: C++ Advanced DSA, Competitive Programming • Python • C#
-- **Tools & Platforms**: Git, Github • Vercel • VS Code • Claude Code • Antigravity • Figma • Photoshop
+- **Tools & Platforms**: Git/Github • Vercel • VS Code • Claude Code • Antigravity • Figma • Photoshop
 
 ## Achievements
 
 - [LeetCode: **Top 1%** profile, **1727** rating, **1000+** solved](https://github.com/yashthorat7)
 - [**Hackathon Winner** & **SIH 2025**/DIPEX 2026 finalist](https://github.com/yashthorat7)
 - [**VCs approached** me regarding one of my AI projects](https://github.com/yashthorat7)
-- [Created **16+** full-stack and **AI projects** on GitHub](https://github.com/yashthorat7)
-- [**Lead** of the **biggest tech club** on campus (Pandora)](https://github.com/yashthorat7)
 - [**AWS Certified** Cloud Foundations **credential** holder](https://github.com/yashthorat7)
+- [**Lead** of the **biggest tech club** on campus (Pandora)](https://github.com/yashthorat7)
+- [Created **16+** full-stack and **AI projects** on GitHub](https://github.com/yashthorat7)

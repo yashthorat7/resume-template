@@ -14,7 +14,7 @@ function renderResume(resume) {
     const contactDiv = document.createElement('div');
     contactDiv.className = 'header-contacts';
     
-    const contactLinksHtml = resume.contact.map(item => parseMarkdownFormatting(item)).join(' <span class="contact-dot">•</span> ');
+    const contactLinksHtml = resume.contact.map(item => parseMarkdownFormatting(item)).join('<span class="contact-dot">•</span>');
     contactDiv.innerHTML = contactLinksHtml;
     headerSection.appendChild(contactDiv);
     container.appendChild(headerSection);
@@ -99,7 +99,7 @@ function renderResume(resume) {
                     
                     const itemsHtml = skillItems.map((sItem, idx) => {
                         const parsedItem = parseMarkdownFormatting(sItem);
-                        const dot = idx < skillItems.length - 1 ? ' <span class="skill-dot">•</span> ' : '';
+                        const dot = idx < skillItems.length - 1 ? '<span class="skill-dot">•</span>' : '';
                         return `<span class="skill-item-text">${parsedItem}</span>${dot}`;
                     }).join('');
                     
