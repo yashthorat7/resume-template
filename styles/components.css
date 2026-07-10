@@ -202,6 +202,19 @@
     margin-top: 0;
 }
 
+.section-text {
+    font-size: var(--size-base);
+    font-weight: var(--weight-body);
+    line-height: var(--line-height-base);
+    margin-top: 0;
+    margin-bottom: 1.5mm;
+    color: var(--color-primary);
+}
+
+.section-text:last-child {
+    margin-bottom: 0;
+}
+
 .font-normal {
     font-weight: var(--weight-bold-highlight);
 }

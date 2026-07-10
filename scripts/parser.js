@@ -58,6 +58,13 @@ function parseResumeMarkdown(mdText) {
                     content
                 });
             }
+        } else {
+            if (currentSection && currentSection.key !== 'header') {
+                currentSection.items.push({
+                    type: 'paragraph',
+                    content: line
+                });
+            }
         }
     }
 

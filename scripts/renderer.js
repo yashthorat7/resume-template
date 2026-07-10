@@ -127,6 +127,15 @@ function renderResume(resume) {
                 listContainer.appendChild(eduRow);
             });
             secElement.appendChild(listContainer);
+        } else {
+            section.items.forEach(item => {
+                if (item.type === 'paragraph' || item.type === 'list-item') {
+                    const p = document.createElement('p');
+                    p.className = 'section-text';
+                    p.innerHTML = parseMarkdownFormatting(item.content);
+                    secElement.appendChild(p);
+                }
+            });
         }
 
         container.appendChild(secElement);
