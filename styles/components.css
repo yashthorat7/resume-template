@@ -17,7 +17,7 @@
 
 .achievement-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     column-gap: 7mm;
     list-style-type: disc;
     padding-left: 7mm;
@@ -39,7 +39,7 @@
 
 .skill-row {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 .skill-title {
@@ -79,7 +79,7 @@
 
 .edu-row {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
     font-family: var(--font-primary);
     font-weight: var(--weight-body);
@@ -95,17 +95,22 @@
     font-weight: var(--weight-edu-bold);
 }
 
+.edu-title, .edu-title .font-normal {
+    font-family: var(--font-secondary);
+    font-weight: var(--weight-entry-title);
+    font-size: var(--size-entry-title);
+}
+
 .pipe-sep {
     display: inline-block;
     width: 0.25em;
     height: 1.1em;
-    vertical-align: middle;
     color: var(--color-secondary);
     user-select: none;
     margin-left: 2mm;
     margin-right: 2mm;
     position: relative;
-    top: -0.05em;
+    top: 0.12em;
 }
 
 .pipe-sep svg {
@@ -217,4 +222,22 @@
 
 .font-normal {
     font-weight: var(--weight-bold-highlight);
+}
+
+.section-divider {
+    border: none;
+    border-top: 0.6px solid #999;
+    margin-top: var(--spacing-entry-gap);
+    margin-bottom: var(--spacing-entry-gap);
+    width: 100%;
+}
+
+.achievement-list .section-divider {
+    grid-column: 1 / -1;
+    list-style-type: none;
+}
+
+.achievement-list.double-column,
+.achievement-list.columns-2 {
+    grid-template-columns: repeat(2, 1fr);
 }

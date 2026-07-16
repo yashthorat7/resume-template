@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('resume-container');
     if (!container) return;
-
     try {
+        loadGoogleFonts();
         let mdText;
         try {
             const res = await fetch('docs/resume.md');
@@ -13,15 +13,40 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (!res.ok) throw new Error();
             mdText = await res.text();
         }
-
-        const resumeData = parseResumeMarkdown(mdText);
-        renderResume(resumeData);
+        renderResume(parseResumeMarkdown(mdText));
     } catch (error) {
-        console.error('Error loading resume:', error);
-        container.innerHTML = `
-            <div style="text-align: center; color: #888; padding: 20px 0; font-size: 13px;">
-                Could not load resume.
-            </div>
-        `;
+        console.error(error);
+        container.innerHTML = `<div style="text-align: center; color: #888; padding: 20px 0; font-size: 13px;">Could not load resume.</div>`;
     }
 });
+
+function loadGoogleFonts() {
+    const rootStyles = getComputedStyle(document.documentElement);
+    const primary = rootStyles.getPropertyValue('--font-primary');
+    const secondary = rootStyles.getPropertyValue('--font-secondary');
+    const families = [];
+    const systemFonts = ['sans-serif', 'serif', 'monospace', 'arial', 'helvetica', 'times new roman', 'times', 'courier new', 'courier', 'verdana', 'georgia', 'palatino', 'garamond', 'bookman', 'comic sans ms', 'trebuchet ms', 'impact'];
+
+    [primary, secondary].forEach(fontVar => {
+        if (!fontVar) return;
+        const fontName = fontVar.split(',')[0].replace(/['"]/g, '').trim();
+        if (fontName && !systemFonts.includes(fontName.toLowerCase())) {
+            families.push(`family=${fontName.replace(/\s+/g, '+')}:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700`);
+        }
+    });
+
+    if (families.length > 0) {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.id = 'dynamic-google-fonts';
+        link.href = `https://fonts.googleapis.com/css2?${families.join('&')}&display=swap`;
+        link.onerror = () => {
+            const fallback = families.map(f => {
+                const match = f.match(/family=[^:]+/);
+                return match ? match[0] : f;
+            });
+            link.href = `https://fonts.googleapis.com/css2?${fallback.join('&')}&display=swap`;
+        };
+        document.head.appendChild(link);
+    }
+}

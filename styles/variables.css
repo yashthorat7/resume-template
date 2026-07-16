@@ -8,7 +8,7 @@
     --weight-semibold: 600;
 
     --weight-body: var(--weight-light);
-    --weight-title: 700;
+    --weight-title: var(--weight-semibold);
     --weight-entry-title: var(--weight-semibold);
     --weight-entry-role: var(--weight-light);
     --weight-skill-title: var(--weight-entry-title);
@@ -39,6 +39,6 @@
     --spacing-bullet-gap: 0.8mm;
     --spacing-bullet-top: 0.6mm;
     --spacing-skill-row-gap: 0.5mm;
-    --spacing-edu-row-gap: 1mm;
+    --spacing-edu-row-gap: var(--spacing-skill-row-gap);
     --spacing-achievement-gap: 0.4mm;
 }
