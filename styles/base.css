@@ -37,6 +37,10 @@ body {
         overflow: hidden !important;
         background: #ffffff !important;
     }
+    body {
+        text-rendering: optimizeSpeed !important;
+        font-variant-ligatures: none !important;
+    }
     .page-container {
         width: 210mm !important;
         height: 297mm !important;

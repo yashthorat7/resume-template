@@ -33,6 +33,10 @@ Here is the exact metrics breakdown of how the baseline **93% ATS score** is cal
 * 📂 **Perfect Reading Order Flow**: Single-column vertical layout prevents parser confusion by guaranteeing a linear, logical scan order.
 * 🚫 **Zero Symbol Pollution**: Eliminates rating bars, progress circles, and graphic symbols, leaving only pure, clean text.
 * 📄 **Semantic HTML Structure**: Converts Markdown headings directly into standard `<h2>` and `<h3>` tags for flawless ATS categorization.
+* 🔤 **Seamless PDF Text Extraction**: Uses visually-hidden accessibility delimiters (`.ats-only`) to ensure that structural text separators (like `|` and `•`) are preserved in the printed PDF's text layer, preventing words and fields from blending together.
+* 🛡️ **Unicode Ligature Prevention**: Disables font ligatures (such as `fi`, `fl`, `ff` combining into single glyphs) in the print styles, ensuring every character maps to a separate standard Unicode codepoint for 100% accurate parser decoding.
+* 📁 **Dynamic Document Metadata**: Auto-sets the browser document title to the candidate's name at runtime, resulting in a correctly named PDF file with valid title properties in its metadata.
+* 📐 **Wait-For-Fonts Spacing Engine**: Defers spatial fitting adjustments until custom fonts have fully downloaded (`document.fonts.ready`). This ensures the engine operates on final text dimensions, eliminating layout shifts and line wrap differences during PDF generation.
 
 ## ✨ Features
 
@@ -144,7 +148,6 @@ Your task is to update the attached template with my raw details provided below 
 2. **Ensure your browser zoom level is exactly 100%** (no more, no less).
 3. Press **`Ctrl + P`** (Windows) or **`Cmd + P`** (Mac) to open the print dialog.
 4. Set the destination to **Save as PDF**.
-5. Click **Save** and enjoy your stunning new resume! 🎉
 
 ---
 

@@ -11,7 +11,7 @@
 ## Skills
 
 * **Frontend**: Next.js • React • TypeScript • JavaScript ES6+ • Three.js • Zustand • Tailwind CSS • HTML • CSS
-* **Backend & DB**: Node.js • Express.js • RESTful API • AWS • PostgreSQL • Supabase • Prisma • WebSockets
+* **Backend & DB**: Node.js • Express.js • RESTful API • AWS • PostgreSQL • MongoDB • Supabase • Prisma
 * **AI & ML**: RAG Architectures • LLM Fine-Tuning • Deep Learning • PyTorch • TensorFlow • Pandas • OpenCV
 * **Programming Languages**: C++ (Advanced DSA, Competitive Programming) • Python (Async IO, CLI) 
 * **Tools & Platforms**: Linux • Git & GitHub • Docker • Vercel • Netlify • Vite • Claude Code • Figma

@@ -3,6 +3,10 @@ function renderResume(resume) {
     if (!container) return;
     container.innerHTML = '';
 
+    if (resume.name) {
+        document.title = resume.name.replace(/\s+/g, '_') + '_Resume';
+    }
+
     const headerSection = document.createElement('section');
     headerSection.className = 'header-section';
     
@@ -12,7 +16,7 @@ function renderResume(resume) {
 
     const contactDiv = document.createElement('div');
     contactDiv.className = 'header-contacts';
-    contactDiv.innerHTML = resume.contact.map(item => parseMarkdownFormatting(item)).join('<span class="contact-dot">•</span>');
+    contactDiv.innerHTML = resume.contact.map(item => parseMarkdownFormatting(item)).join('<span class="contact-dot"><span class="ats-only"> • </span></span>');
     headerSection.appendChild(contactDiv);
     container.appendChild(headerSection);
 
@@ -95,7 +99,7 @@ function renderResume(resume) {
                         const skillList = document.createElement('div');
                         skillList.className = 'skill-list';
                         skillList.innerHTML = match[2].split('•').map((sItem, idx, arr) => {
-                            return `<span class="skill-item-text">${parseMarkdownFormatting(sItem.trim())}</span>${idx < arr.length - 1 ? '<span class="skill-dot">•</span>' : ''}`;
+                            return `<span class="skill-item-text">${parseMarkdownFormatting(sItem.trim())}</span>${idx < arr.length - 1 ? '<span class="skill-dot"><span class="ats-only"> • </span></span>' : ''}`;
                         }).join('');
                         
                         skillRow.appendChild(skillList);
@@ -131,7 +135,7 @@ function renderResume(resume) {
                     eduRow.innerHTML = parts.map((part, idx) => {
                         const parsed = parseMarkdownFormatting(part);
                         return idx === 0 ? `<span class="edu-title">${parsed}</span>` : parsed.replace(/class="font-normal"/g, 'class="edu-bold"');
-                    }).join('<span class="pipe-sep"><svg viewBox="0 0 6 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><line x1="3" y1="2" x2="3" y2="22"></line></svg></span>');
+                    }).join('<span class="pipe-sep"><span class="ats-only"> | </span><svg viewBox="0 0 6 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><line x1="3" y1="2" x2="3" y2="22"></line></svg></span>');
                     listContainer.appendChild(eduRow);
                 } else if (item.type === 'divider') {
                     const hr = document.createElement('hr');
